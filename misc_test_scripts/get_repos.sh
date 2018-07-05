@@ -13,7 +13,7 @@ echo "checking out to puppet dir and Installing puppet and other necessary tools
 ./install_puppet_and_test_client.sh
 cd
 echo "Getting includeos repo"
-git clone https://github.com/hioa-cs/IncludeOS.git
+git clone https://github.com/staiyeba/IncludeOS.git
 cd IncludeOS
 git checkout dev
 
