@@ -54,11 +54,13 @@ ssh -q -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no $IP '
     export num_jobs="-j 4"
     export INCLUDEOS_ENABLE_TEST=OFF
 
+
 	git clone https://github.com/hioa-cs/IncludeOS.git
 	cd IncludeOS
 	git checkout dev
 	./install.sh -y
 
+	sudo pip install subprocess32
 	cd test
 	./testrunner.py -t intrusive
 	cd
