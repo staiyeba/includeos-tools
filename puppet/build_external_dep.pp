@@ -29,5 +29,5 @@ package { $pip_packages :
 }
 
 exec { 'conan-config':
-  command => conan config install https://github.com/includeos/conan_config.git
+  command => "conan config install https://github.com/includeos/conan_config.git"
 }
