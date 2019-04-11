@@ -14,7 +14,7 @@ package { [ "gcc-aarch64-linux-gnu", "c++-aarch64-linux-gnu" ] :
 }
 
 # Test system dependencies
-package { [ "qemu-system", "lcov", "grub2", "openjdk-8-jre-headless" ] :
+package { [ "qemu-system", "lcov", "grub2", "openjdk-8-jre-headless", "git" ] :
   ensure => present,
 }
 
@@ -26,8 +26,4 @@ $pip_packages = [ "wheel", "jsonschema", "conan", "psutil", "ws4py" ]
 package { $pip_packages :
   ensure => present,
   provider => pip3,
-}
-
-exec { 'conan-config':
-  command => 'conan config install https://github.com/includeos/conan_config.git'
 }
