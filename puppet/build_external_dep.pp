@@ -27,3 +27,8 @@ package { $pip_packages :
   ensure => present,
   provider => pip3,
 }
+
+Exec { 'conan-config':
+  command => 'conan config install https://github.com/includeos/conan_config.git',
+  path => ["/usr/bin", "/bin", "/usr/sbin", "/sbin", "/usr/local/bin","/usr/local/sbin"],
+}
