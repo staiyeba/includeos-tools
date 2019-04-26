@@ -10,4 +10,4 @@ sudo apt-get -y install puppet-agent
 sudo echo "PATH=$PATH:/opt/puppetlabs/bin" >> ~/.bashrc
 source ~/.bashrc
 
-sudo puppet apply ~/includeos-tools/puppet/$FILE
+sudo /opt/puppetlabs/bin/puppet apply ~/includeos-tools/puppet/$FILE
